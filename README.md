@@ -106,7 +106,7 @@ Key Features
 •	Real world problem modelling
 
 
-Class Diagram
+# Class Diagram
 The DifferentCoat system is built using a modular, object oriented architecture. Below is a structured UML-style breakdown of the classes, interfaces, inheritance, and relationships used in the project.
 Customer Hierarchy
 Customer (Base Class)
