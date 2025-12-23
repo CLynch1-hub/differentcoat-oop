@@ -207,6 +207,13 @@ DifferentCoat/
 ├── docs/
 └── report/
 
+## 🧩 Class Diagram (Visual)
+
+The following diagram illustrates the full object-oriented structure of the DifferentCoat system, including class relationships, inheritance, attributes, and key methods.
+
+![DifferentCoat UML Class Diagram](docs/class-diagram.png)
+
+
 
 
 
