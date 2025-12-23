@@ -106,6 +106,108 @@ Key Features
 •	Real world problem modelling
 
 
+Class Diagram
+The DifferentCoat system is built using a modular, object oriented architecture. Below is a structured UML-style breakdown of the classes, interfaces, inheritance, and relationships used in the project.
+Customer Hierarchy
+Customer (Base Class)
+Fields
+•	customerType : String
+•	address : String
+•	telephone : String
+•	surfaceArea : double
+•	roomShape : double
+•	height : double
+•	width : double
+Constructors
+•	Customer(customerType, address, telephone, surfaceArea)
+•	Customer(customerType, address, telephone, roomShape, height, width)
+Methods
+•	calculateCoverage() : double
+•	Getters & setters for all fields
+•	toString() : String (overridable)
+
+GeneralCustomer (extends Customer)
+Additional Field
+•	customerName : String
+Constructor
+•	GeneralCustomer(customerType, address, telephone, roomShape, height, width, customerName)
+Overrides
+•	calculateCoverage() : double
+•	toString() : String
+
+TradeCustomer (extends Customer)
+Additional Field
+•	tradeName : String
+Constructor
+•	TradeCustomer(customerType, address, telephone, surfaceArea, tradeName)
+Overrides
+•	calculateCoverage() : double
+•	toString() : String
+
+Shapes Package
+Shape (Interface)
+•	getArea() : double
+•	getPerimeter() : double
+Square
+•	side : double
+•	Constructor: Square(double side)
+•	Implements: getArea(), getPerimeter(), toString()
+
+Rectangle
+•	length : double
+•	width : double
+•	Constructor: Rectangle(double length, double width)
+•	Implements: getArea(), getPerimeter(), toString()
+Circle
+•	radius : double
+•	Constructor: Circle(double radius)
+•	Implements: getArea(), getPerimeter(), toString()
+Cylinder (extends Circle)
+•	height : double
+•	Constructor: Cylinder(double radius, double height)
+•	Additional method: getVolume() : double
+•	Getters/setters for height
+•	Overrides: toString()
+
+Utilities Package
+Constants
+Stores fixed values used in calculations:
+•	WINDOW : int = 25
+•	DOOR : int = 20
+•	COVERAGE : int = 350 (sq ft per gallon)
+•	LITRES : double = 4.54 (litres per gallon)
+All fields are static final.
+Helper
+Handles file input and record parsing.
+Fields
+•	recordsFromFile : ArrayList<String>
+Methods
+•	readFileIntoList(File file) : ArrayList<String>
+Main Package
+Demo
+•	Explains system behaviour
+•	Loads CSV data
+•	Instantiates correct customer objects
+•	Outputs formatted paint calculations
+
+DifferentCoat/
+│
+├── src/
+│   ├── main/java/com/nwrc/
+│   │   ├── Customers/
+│   │   ├── Shapes/
+│   │   ├── Utilities/
+│   │   ├── DataAccess/
+│   │   └── Main/
+│   │
+│   └── test/java/com/nwrc/
+│       └── AllTests/
+│
+├── data/
+├── docs/
+└── report/
+
+
 
 
 
